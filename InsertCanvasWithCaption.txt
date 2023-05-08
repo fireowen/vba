@@ -1,0 +1,12 @@
+Attribute VB_Name = "InsertCanvasWithCaption"
+Sub InsertDrawingCanvas()
+    
+    ' Insert a new drawing canvas
+    Application.CommandBars.ExecuteMso ("InsertInkDrawingCanvas")
+    
+    ' add caption to canvas
+    Selection.InsertCaption Label:="Figure", TitleAutoText:="InsertCaption1", _
+    Title:="", Position:=wdCaptionPositionBelow, ExcludeLabel:=0
+    Selection.TypeText Text:=vbTab
+End Sub
+
